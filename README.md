@@ -1,2 +1,1 @@
-# paternostrumsite
-Paternostrum production website files
+Site files for paternostrumLivesite (working files)
