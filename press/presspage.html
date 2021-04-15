@@ -2,16 +2,121 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <meta name="Paternostrum" content="MOKT Theatre Production of Paternostrum">
+    <meta name="Paternostrum Press" content="MOKT Theatre Production of Paternostrum - Press Kit">
     <meta name="paternostrum,pater,nostrum,paternoster,theatre,mokt,toronto,play,fringe festival,fringe,press kit,press" content="HTML, CSS">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon/favicon-modepref.svg" type="image/svg+xml">
-    <title>Paternostrum - Press Kit</title>
+    <title>Paternostrum - Press</title>
     <!--Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
+    /*Menu Styles*/
+    .navWrapper, .nav, .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #FFDF5E;
+        padding: 5px 10px 5px 10px;
+        transition: 0.5s;
+        border-radius: 2px;
+        overflow: hidden;
+    }
+
+    .menu {
+        margin: 0;
+        padding: 0;
+        width: 0;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .nav input:checked ~ .menu {
+        width: 200px;
+    }
+
+    .menu li {
+        list-style: none;
+        margin: 0 10px;
+    }
+
+    .menu li a {
+        text-decoration: none;
+        color: #111111;
+        text-transform: uppercase;
+        font-size: 16pt;
+        font-weight: 400;
+        transition: 0.5s;
+    }
+
+    @media only screen and (min-width: 500px) {
+        .nav input:checked ~ .menu {
+            width: 450px;
+        }
+        .menu li {
+            list-style: none;
+            margin: 0 15%;
+        }
+
+        .menu li a {
+            text-decoration: none;
+            color: #666;
+            text-transform: uppercase;
+            font-size: 16pt;
+            font-weight: 400;
+            transition: 0.5s;
+        }
+
+        .menu li a:hover {
+            color: #111111;
+        }
+    }
+
+    /*Nav Icon*/
+    .nav input {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .nav span {
+        position: absolute;
+        left: 19px;
+        width: 30px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #111111;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+
+    .nav input:checked ~ span {
+        background-color: #111111;
+    }
+
+    .nav span:nth-child(2) {
+        transform: translateY(-8px);
+    }
+
+    .nav input:checked ~ span:nth-child(2) {
+        transform: translateY(0) rotate(-45deg);
+    }
+    .nav span:nth-child(3) {
+        transform: translateY(8px);
+    }
+
+    .nav input:checked ~ span:nth-child(3) {
+        transform: translateY(0) rotate(45deg);
+    }
+
     /*Copywrite Footer Classes*/
     #body {
         position: relative;
@@ -54,8 +159,12 @@
         background-color: #111111;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     h1 {
-        padding: 5% 0px 0px 0px;
+        padding: 100px 0px 0px 0px;
         margin: 0px 0px 0px 0px;
         color: #FFDF5E;
         font-size: 70pt;
@@ -73,8 +182,8 @@
 
     .textBody p {
         font-family: 'Montserrat', sans-serif;
-        font-size: 14pt;
-        line-height: 20pt;
+        font-size: 12pt;
+        line-height: 18pt;
         color: #dadada;
     }
 
@@ -88,6 +197,7 @@
         color: #111111;
         border: solid;
         border-width: 1px;
+        border-radius: 2px;
         border-color: #FFDF5E;
         background-color: #FFDF5E;
         padding: 4px 6px 4px 6px;
@@ -138,6 +248,17 @@
     </style>
 </head>
 <body id="body">
+    <div class="navWrapper">
+        <div class="nav">
+            <input type="checkbox">
+            <span></span>
+            <span></span>
+            <div class="menu">
+                <li><a href="https://www.paternostrum.com/">Live Stream</a></li>
+                <li><a href="https://www.paternostrum.com/press/">Press</a></li>
+            </div>
+      </div>
+    </div>
     <div id="content-wrap">
         <h1>Press</h1>
         <h2>Faith, Mechanism, Desperation: Paternostrum Explores the Fragility of Stability and What We Take for Granted</h2>
@@ -149,7 +270,8 @@
             <p><i>Paternostrum</i> is the first production staged by Mokt, a theatre collective established in 2018 and filled with University of Toronto graduates. Leading the team is Director Jeff Kennes, a veteran of large and small ensemble pieces with experience directing shows in both Toronto Fringe and InspiraTO. Backing him is a production team that has over two decades of collective experience in theatre and within the Toronto theatre community, whose experience ranges from Hart House, Lower Ossington Theatre, and the Toronto Festival of Dance, to extraneous experience in large scale projects from the Edinburgh Fringe to New York City. 
             </p>
             <div class="imageWrap">
-                <img class="bodyImage" <!--src="/assets/2020.09.26 Paternostrum Poster 2 v02 RAST@0.25x.jpg" src="https://raw.githubusercontent.com/michaelmarshall-bot/paternostrumLivesite/master/assets/2020.09.26%20Paternostrum%20Poster%202%20v02%20RAST%400.25x.jpg"></img>
+                <img class="bodyImage" src="https://raw.githubusercontent.com/michaelmarshall-bot/paternostrumLivesite/master/assets/2020.09.26%20Paternostrum%20Poster%202%20v02%20RAST%400.25x.jpg"></img>
+                <!--<img src="/assets/2020.09.26 Paternostrum Poster 2 v02 RAST@0.25x.jpg">-->
             </div>
             <p>Producing <i>Paternostrum</i> through COVID-19 has been a hurricane. Originally set to premiere at the 2020 Toronto Fringe, what was meant to be a 6 month production process will now span more than two years as the company anxiously awaits the opportunity to fully stage the show for a live audience. Writer/Producer Michael Marshall provides his perspective of the turbulent process here:<br>
             "In short, I’m lucky to have been surrounded by both talented and patient people. The pandemic forces a more impersonal approach; emails and zoom fatigue; meetings where a producer feels like the head of the Norsefire party looking down at strained underlit faces in the gloom. In reality, that distance behind a screen has been met by the cast and crew with nothing but hard-work and compassion. 
@@ -157,7 +279,9 @@
             </p>
             <p>Until the fateful days following mass-vaccination, the <i>Paternostrum</i> Table Read will premiere <b>Live on Youtube on Sunday, May 30th at 5pm.</b> The Table Read will become a permanent upload when the livestream ends.</p>
         </div>
-        <div id="pressKit-button" href="">Download Press Kit</div>
+        <a href="https://drive.google.com/uc?export=download&id=1xQPLj1Y_c5darRiO1xZwNooYOEJo2ULg">
+            <div id="pressKit-button">Download Press Kit</div>
+        </a>
     </div>
     <p class="admintext">Copyright © 2021 MOKT Theatre Company</p>
 </body>
